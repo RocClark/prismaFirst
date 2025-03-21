@@ -10,8 +10,26 @@ async function main() {
   //       email: "john@gmail.com",
   //     },
   //});
-  const user = await prisma.user.findMany();
-  console.log(user);
+  //  const user = await prisma.user.findMany();
+
+  //create article and associate with user
+  //   const article = await prisma.article.create({
+  //     data: {
+  //       title: "first article",
+  //       body: "This is a test first article",
+  //       published: true,
+  //       author: {
+  //         connect: {
+  //           id: 1,
+  //         },
+  //       },
+  //     },
+  //   });
+  //
+  const article = await prisma.article.findMany();
+  //  console.log(user);
+
+  console.log(article);
 }
 
 main()
