@@ -6,3 +6,7 @@
     -npmx tsc init
     - npm iprisma -d
     npx prisma init
+
+## step 2 model
+
+- set model schema in the scheema.prisma file
