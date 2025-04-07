@@ -80,16 +80,23 @@ async function main() {
   //console.log(users);
   //   console.log(article.title);
   //update data
-  const user = await prisma.user.update({
-    where: {
-      id: 1,
-    },
-    data: {
-      name: "John Doe jr",
-    },
-  });
-  console.log(user);
+  // const user = await prisma.user.update({
+  //   where: {
+  //     id: 1,
+  //   },
+  //   data: {
+  //     name: "John Doe jr",
+  //   },
+  // });
+  // console.log(user);
   //delete data
+  // const article = await prisma.article.delete({
+  //   where: {
+  //     id: 2,
+  //   },
+  // });
+
+  console.log(articles);
 }
 
 main()
