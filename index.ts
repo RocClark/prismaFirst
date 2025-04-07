@@ -65,20 +65,31 @@ async function main() {
   //     },
   //   },
   // });
-  // console.log(article);
-  console.log(articles);
-  //console.log(users);
 
   // lopp over saras articles
-  users.forEach((user) => {
-    console.log(`User: ${user.name},Email: ${user.email}`);
-    console.log("Articles:");
-    user.articles.forEach((article) => {
-      console.log(`- Title: ${article.title}, Body: ${article.body}`);
-    });
-    console.log("/n");
-  });
+  //  users.forEach((user) => {
+  //     console.log(`User: ${user.name},Email: ${user.email}`);
+  //     console.log("Articles:");
+  //     user.articles.forEach((article) => {
+  //       console.log(`- Title: ${article.title}, Body: ${article.body}`);
+  //     });
+  //     console.log("/n");
+  //   });
+  // console.log(article);
+  // console.log(articles);
+  //console.log(users);
   //   console.log(article.title);
+  //update data
+  const user = await prisma.user.update({
+    where: {
+      id: 1,
+    },
+    data: {
+      name: "John Doe jr",
+    },
+  });
+  console.log(user);
+  //delete data
 }
 
 main()
